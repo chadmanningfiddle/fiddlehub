@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Lessons - My Fiddle Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wood-dark: #2b1810;
+            --wood-medium: #8b4513;
+            --wood-light: #bc7642;
+            --text-warm: #e8d5c4;
+            --fiddle-glow: rgba(193, 127, 89, 0.3);
+        }
+
+        body {
+            background-image: url('./images/tree-bark.jpg');
+            background-size: cover;
+            font-family: 'Libre Baskerville', serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-warm);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: rgba(43, 24, 16, 0.85);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: var(--text-warm);
+            text-shadow: 0 0 15px var(--fiddle-glow);
+            margin-bottom: 40px;
+        }
+
+        .week-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            color: var(--text-warm);
+            opacity: 0.7;
+            font-size: 16px;
+        }
+
+        .day-section {
+            margin-bottom: 30px;
+        }
+
+        .day-title {
+            font-size: 24px;
+            color: var(--text-warm);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--fiddle-glow);
+        }
+
+        .time-slots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .time-slot {
+            background: rgba(139, 69, 19, 0.7);
+            padding: 12px 25px;
+            border-radius: 25px;
+            color: var(--text-warm);
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .time-slot:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px var(--fiddle-glow);
+        }
+
+        .back-button {
+            display: block;
+            text-align: center;
+            color: var(--text-warm);
+            text-decoration: none;
+            margin-top: 40px;
+            font-size: 18px;
+            text-shadow: 0 0 10px var(--fiddle-glow);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>January 2025</h1>
+        
+        <div class="week-nav">
+            <span>← Previous Week</span>
+            <span>Next Week →</span>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Tuesday, January 7</div>
+            <div class="time-slots">
+                <div class="time-slot">8:00 AM</div>
+                <div class="time-slot">9:00 AM</div>
+                <div class="time-slot">10:00 AM</div>
+                <div class="time-slot">11:00 AM</div>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Wednesday, January 8</div>
+            <div class="time-slots">
+                <div class="time-slot">7:30 AM</div>
+                <div class="time-slot">8:30 AM</div>
+                <div class="time-slot">9:30 AM</div>
+                <div class="time-slot">10:30 AM</div>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Thursday, January 9</div>
+            <div class="time-slots">
+                <div class="time-slot">8:00 AM</div>
+                <div class="time-slot">9:00 AM</div>
+                <div class="time-slot">10:00 AM</div>
+                <div class="time-slot">11:00 AM</div>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Friday, January 10</div>
+            <div class="time-slots">
+                <div class="time-slot">8:00 AM</div>
+                <div class="time-slot">9:00 AM</div>
+                <div class="time-slot">10:00 AM</div>
+                <div class="time-slot">11:00 AM</div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>

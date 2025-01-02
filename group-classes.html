@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Classes - My Fiddle Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wood-lightest: #e8d5c4;
+            --wood-light: #d4b08c;
+            --wood-medium: #bc7642;
+            --wood-dark: #8b4513;
+            --text-color: #2b1810;
+            --fiddle-glow: rgba(193, 127, 89, 0.4);
+        }
+
+        body {
+            background-image: url('./images/tree-bark.jpg');
+            background-size: cover;
+            font-family: 'Libre Baskerville', serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(232, 213, 196, 0.9);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .date-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-arrow {
+            color: var(--wood-dark);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: var(--text-color);
+            margin-bottom: 40px;
+        }
+
+        .class-card {
+            background: var(--wood-light);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .class-card.selected {
+            background: var(--wood-medium);
+            box-shadow: 0 0 20px var(--fiddle-glow);
+            transform: translateY(-3px);
+        }
+
+        .class-time {
+            font-size: 24px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .class-name {
+            font-size: 20px;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .total-section {
+            background: var(--wood-medium);
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 24px;
+            color: var(--wood-lightest);
+        }
+
+        .book-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            background: var(--wood-dark);
+            color: var(--wood-lightest);
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .book-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px var(--fiddle-glow);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="date-navigation">
+            <span class="nav-arrow">←</span>
+            <h1>January 13, 2025</h1>
+            <span class="nav-arrow">→</span>
+        </div>
+
+        <div class="class-card" onclick="toggleClass(this)">
+            <div class="class-time">9:00 AM</div>
+            <div class="class-name">Old Time Fiddle Tune Groove</div>
+        </div>
+
+        <div class="class-card" onclick="toggleClass(this)">
+            <div class="class-time">10:00 AM</div>
+            <div class="class-name">Twin Fiddling</div>
+        </div>
+
+        <div class="class-card" onclick="toggleClass(this)">
+            <div class="class-time">11:00 AM</div>
+            <div class="class-name">Swing Time</div>
+        </div>
+
+        <div class="class-card" onclick="toggleClass(this)">
+            <div class="class-time">12:00 PM</div>
+            <div class="class-name">Contemporary Fiddle Tunes</div>
+        </div>
+
+        <div class="class-card" onclick="toggleClass(this)">
+            <div class="class-time">1:00 PM</div>
+            <div class="class-name">Bluegrass Fiddle Tunes: The Classics</div>
+        </div>
+
+        <div class="class-card" onclick="toggleClass(this)">
+            <div class="class-time">2:00 PM</div>
+            <div class="class-name">The Bluegrass Jam</div>
+        </div>
+
+        <div class="total-section">
+            Total: $0 (0 classes @ $25 each)
+        </div>
+
+        <button class="book-button">Book Selected Classes</button>
+    </div>
+
+    <script>
+        let selectedClasses = [];
+        const januaryDates = [13, 20, 27];
+        let currentDateIndex = 0;
+
+        function toggleClass(card) {
+            card.classList.toggle('selected');
+            updateTotal();
+        }
+
+        function updateTotal() {
+            selectedClasses = document.querySelectorAll('.class-card.selected');
+            let count = selectedClasses.length;
+            let pricePerClass = count >= 4 ? 20 : 25;
+            let total = count * pricePerClass;
+            
+            document.querySelector('.total-section').textContent = 
+                `Total: $${total} (${count} classes @ $${pricePerClass} each)`;
+        }
+
+        function updateDate(direction) {
+            if (direction === 'next' && currentDateIndex < januaryDates.length - 1) {
+                currentDateIndex++;
+            } else if (direction === 'prev' && currentDateIndex > 0) {
+                currentDateIndex--;
+            }
+            document.querySelector('h1').textContent = `January ${januaryDates[currentDateIndex]}, 2025`;
+        }
+
+        document.querySelectorAll('.nav-arrow').forEach(arrow => {
+            arrow.addEventListener('click', () => {
+                updateDate(arrow.textContent === '→' ? 'next' : 'prev');
+            });
+        });
+    </script>
+</body>
+</html>
