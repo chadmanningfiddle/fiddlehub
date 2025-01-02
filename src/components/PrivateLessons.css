@@ -1,4 +1,4 @@
-.fiddle-shack {
+.private-lessons {
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
@@ -10,7 +10,7 @@
     color: var(--text-warm);
   }
   
-  .fiddle-shack h1 {
+  .private-lessons h1 {
     text-align: center;
     font-size: 48px;
     color: var(--text-warm);
@@ -18,51 +18,56 @@
     margin-bottom: 30px;
   }
   
-  .fiddle-shack .content {
+  .private-lessons .content {
     padding: 20px;
   }
   
-  .fiddle-shack h2 {
+  .private-lessons h2 {
     font-size: 36px;
     color: var(--fiddle-orange);
     margin-bottom: 20px;
   }
   
-  .fiddle-shack p {
+  .private-lessons p {
     font-size: 22px;
     line-height: 1.6;
     margin-bottom: 30px;
   }
   
-  .fiddle-shack .features {
+  .private-lessons .lesson-info {
     background: rgba(43, 24, 16, 0.5);
     padding: 25px;
     border-radius: 15px;
     margin-top: 30px;
   }
   
-  .fiddle-shack h3 {
+  .private-lessons h3, 
+  .private-lessons h4 {
     font-size: 28px;
     color: var(--fiddle-orange);
     margin-bottom: 20px;
   }
   
-  .fiddle-shack ul {
+  .private-lessons ul {
     list-style: none;
     padding: 0;
   }
   
-  .fiddle-shack li {
+  .private-lessons li {
     font-size: 20px;
     margin: 15px 0;
     padding-left: 25px;
     position: relative;
   }
   
-  .fiddle-shack li::before {
+  .private-lessons li::before {
     content: '♪';
     position: absolute;
     left: 0;
     color: var(--fiddle-orange);
+  }
+  
+  .private-lessons .lesson-focus {
+    margin-top: 30px;
   }
   
