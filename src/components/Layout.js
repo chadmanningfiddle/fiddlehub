@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import './Layout.css';
 
-function App() {
+function Layout() {
   return (
     <div className="container">
       <img src="/images/wooden-fiddle.jpg" alt="Wooden Fiddle" className="fiddle-logo" />
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default Layout;
