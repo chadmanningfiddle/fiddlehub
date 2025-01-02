@@ -1,0 +1,18 @@
+.group-classes {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(43, 24, 16, 0.85);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    color: var(--text-warm);
+  }
+  
+  .group-classes h1 {
+    font-size: 48px;
+    color: var(--text-warm);
+    text-shadow: 0 0 15px var(--fiddle-glow);
+    margin-bottom: 50px;
+  }
+  

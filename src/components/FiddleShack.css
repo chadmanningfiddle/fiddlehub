@@ -1,0 +1,16 @@
+.fiddle-shack {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(43, 24, 16, 0.85);
+    color: #e8d5c4;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .fiddle-shack h1 {
+    font-size: 36px;
+    color: #c17f59;
+    text-shadow: 0 0 10px rgba(193, 127, 89, 0.3);
+  }
+  
