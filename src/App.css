@@ -1,9 +1,8 @@
 .App {
   min-height: 100vh;
-  background-image: url('/images/tree-bark.jpg');
-  background-size: cover;
   font-family: 'Libre Baskerville', serif;
   padding: 20px;
+  background: #2b1810;
 }
 
 :root {
