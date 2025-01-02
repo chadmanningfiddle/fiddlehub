@@ -29,6 +29,6 @@
     ]
   },
   "devDependencies": {
-    "vite": "^5.0.1"
+    "vite": "v6.06"
   }
 }
